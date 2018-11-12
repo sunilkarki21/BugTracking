@@ -53,6 +53,10 @@ namespace bugTracking.user
             ChangePassword cp = new ChangePassword();
             cp.Show();
         }
- 
+
+        private void btn__bug_report_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

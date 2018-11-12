@@ -141,10 +141,11 @@ namespace bugTracking.user
             string status = cmbBox_status.Text.ToString();
             //getting loggedin user in added by field
             string loggeduser = login.loggedIn;
-            string addedby = loggeduser;
-             
-             
-             ReportDate = DateTime.Now.ToString("yyyy-MM-dd");
+           string addedby = loggeduser;
+          
+
+
+            ReportDate = DateTime.Now.ToString("yyyy-MM-dd");
 
 
             try

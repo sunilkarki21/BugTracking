@@ -133,6 +133,7 @@
             this.btn_changeDetails.TabIndex = 12;
             this.btn_changeDetails.Text = "Change Details";
             this.btn_changeDetails.UseVisualStyleBackColor = false;
+            this.btn_changeDetails.Click += new System.EventHandler(this.btn_changeDetails_Click);
             // 
             // user_id
             // 

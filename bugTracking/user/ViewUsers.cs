@@ -96,5 +96,10 @@ namespace bugTracking.user
             DataTable dt = vu.Select_user();
             dataGridView1.DataSource = dt;
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

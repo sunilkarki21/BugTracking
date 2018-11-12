@@ -61,17 +61,28 @@ namespace bugTracking
                     {
                         case "Admin":
                         {
-                                //Display Admin Dashboard
-                                this.Hide();
-                                loggedIN_utype = uType;
-                                admin_dashboard admin = new admin_dashboard();
-                                MessageBox.Show("Login was succesful. Welcome back " + txtUser.Text + " !!");
-                                admin.Show();
+                                if (user == "admin")
+                                {
+                                    //Display Admin Dashboard
+                                    this.Hide();
+                                    loggedIN_utype = uType;
+                                    admin_dashboard admin = new admin_dashboard();
+                                    MessageBox.Show("Login was succesful. Welcome back " + txtUser.Text + " !!");
+                                    admin.Show();
+                                }
+                                else
+                                {
+                                     MessageBox.Show("Admin Login was failed. Please enter correct username", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+                                }
+
                                 break;
 
                         }
                          case "User":
                         {
+
                                 //Display User Dashboard
                                 this.Hide();
                                 user.Dashboard umenu = new user.Dashboard();
@@ -79,7 +90,16 @@ namespace bugTracking
                                 umenu.Show();
                                 break;
                             }
-                         
+                        case "Debugger":
+                            {
+                                //Display User Dashboard
+                                this.Hide();
+                                user.Dashboard umenu = new user.Dashboard();
+                                MessageBox.Show("Login was succesful. Welcome back " + txtUser.Text + " !!");
+                                umenu.Show();
+                                break;
+                            }
+
                     }
                    
                 }

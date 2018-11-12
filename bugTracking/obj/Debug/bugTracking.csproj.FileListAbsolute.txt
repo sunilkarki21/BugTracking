@@ -12,7 +12,6 @@ D:\vstudio project\bugTracking\bugTracking\obj\Debug\bugTracking.login.resources
 D:\vstudio project\bugTracking\bugTracking\bin\Debug\Google.Protobuf.dll
 D:\vstudio project\bugTracking\bugTracking\bin\Debug\MySql.Data.xml
 D:\vstudio project\bugTracking\bugTracking\obj\Debug\bugTracking.csproj.CopyComplete
-D:\vstudio project\bugTracking\bugTracking\obj\Debug\bugTracking.MDIParent1.resources
 D:\vstudio project\bugTracking\bugTracking\bin\Debug\MySql.Data.dll
 D:\vstudio project\bugTracking\bugTracking\obj\Debug\bugTracking.user.dashboard.resources
 D:\vstudio project\bugTracking\bugTracking\obj\Debug\bugTracking.user.Help.resources

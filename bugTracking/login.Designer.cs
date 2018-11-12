@@ -140,13 +140,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(21, 303);
+            this.label1.Location = new System.Drawing.Point(24, 285);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(243, 23);
+            this.label1.Size = new System.Drawing.Size(245, 72);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Bug Tracking Application";
+            this.label1.Text = "Bug Tracking \r\n Application";
             // 
             // pictureBox1
             // 

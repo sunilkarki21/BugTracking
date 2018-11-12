@@ -51,5 +51,24 @@ namespace bugTracking
 
 
         }
+
+        private void button_logout_Click(object sender, EventArgs e)
+        {
+            login logout = new login();
+            logout.Show();
+            this.Hide();
+        }
+
+        private void button_help_Click(object sender, EventArgs e)
+        {
+            user.Help help = new user.Help();
+            help.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

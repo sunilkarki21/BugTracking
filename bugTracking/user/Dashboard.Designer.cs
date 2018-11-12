@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.btn__bug_report = new System.Windows.Forms.Button();
             this.btn_bug_solve = new System.Windows.Forms.Button();
             this.btn_bug_notsolved = new System.Windows.Forms.Button();
             this.btn_add_bug = new System.Windows.Forms.Button();
@@ -40,21 +39,8 @@
             this.lblLoggedInUser = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_setting = new System.Windows.Forms.Button();
+            this.btn__bug_report = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btn__bug_report
-            // 
-            this.btn__bug_report.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(175)))), ((int)(((byte)(145)))));
-            this.btn__bug_report.FlatAppearance.BorderSize = 0;
-            this.btn__bug_report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn__bug_report.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn__bug_report.ForeColor = System.Drawing.Color.White;
-            this.btn__bug_report.Location = new System.Drawing.Point(60, 77);
-            this.btn__bug_report.Name = "btn__bug_report";
-            this.btn__bug_report.Size = new System.Drawing.Size(187, 68);
-            this.btn__bug_report.TabIndex = 3;
-            this.btn__bug_report.Text = "Bug Reported";
-            this.btn__bug_report.UseVisualStyleBackColor = false;
             // 
             // btn_bug_solve
             // 
@@ -175,6 +161,21 @@
             this.btn_setting.UseVisualStyleBackColor = false;
             this.btn_setting.Click += new System.EventHandler(this.btn_setting_Click);
             // 
+            // btn__bug_report
+            // 
+            this.btn__bug_report.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(175)))), ((int)(((byte)(145)))));
+            this.btn__bug_report.FlatAppearance.BorderSize = 0;
+            this.btn__bug_report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn__bug_report.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn__bug_report.ForeColor = System.Drawing.Color.White;
+            this.btn__bug_report.Location = new System.Drawing.Point(60, 77);
+            this.btn__bug_report.Name = "btn__bug_report";
+            this.btn__bug_report.Size = new System.Drawing.Size(187, 68);
+            this.btn__bug_report.TabIndex = 3;
+            this.btn__bug_report.Text = "Bug Reported";
+            this.btn__bug_report.UseVisualStyleBackColor = false;
+            this.btn__bug_report.Click += new System.EventHandler(this.btn__bug_report_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -203,7 +204,6 @@
         #endregion
 
         private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.Button btn__bug_report;
         private System.Windows.Forms.Button btn_bug_solve;
         private System.Windows.Forms.Button btn_bug_notsolved;
         private System.Windows.Forms.Button btn_add_bug;
@@ -213,6 +213,7 @@
         private System.Windows.Forms.Label lblLoggedInUser;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_setting;
+        private System.Windows.Forms.Button btn__bug_report;
     }
 }
 
