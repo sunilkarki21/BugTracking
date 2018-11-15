@@ -35,9 +35,9 @@
             this.text_search = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_refresh = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox_slctutype = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btn_showall = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +54,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(291, 9);
+            this.label1.Location = new System.Drawing.Point(298, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(141, 23);
             this.label1.TabIndex = 1;
@@ -86,10 +86,11 @@
             this.butn_cancel.TabIndex = 3;
             this.butn_cancel.Text = "Cancel";
             this.butn_cancel.UseVisualStyleBackColor = false;
+            this.butn_cancel.Click += new System.EventHandler(this.butn_cancel_Click);
             // 
             // text_search
             // 
-            this.text_search.Location = new System.Drawing.Point(97, 129);
+            this.text_search.Location = new System.Drawing.Point(150, 128);
             this.text_search.Multiline = true;
             this.text_search.Name = "text_search";
             this.text_search.Size = new System.Drawing.Size(431, 31);
@@ -100,7 +101,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 138);
+            this.label2.Location = new System.Drawing.Point(70, 137);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 22);
             this.label2.TabIndex = 6;
@@ -112,56 +113,56 @@
             this.btn_refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_refresh.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_refresh.ForeColor = System.Drawing.Color.White;
-            this.btn_refresh.Location = new System.Drawing.Point(649, 129);
+            this.btn_refresh.Location = new System.Drawing.Point(593, 129);
             this.btn_refresh.Name = "btn_refresh";
-            this.btn_refresh.Size = new System.Drawing.Size(79, 30);
+            this.btn_refresh.Size = new System.Drawing.Size(135, 30);
             this.btn_refresh.TabIndex = 7;
             this.btn_refresh.Text = "Refresh";
             this.btn_refresh.UseVisualStyleBackColor = false;
             this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
             // 
-            // button1
+            // comboBox_slctutype
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(175)))), ((int)(((byte)(145)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(558, 129);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 30);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Edit";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBox_slctutype.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_slctutype.FormattingEnabled = true;
+            this.comboBox_slctutype.Items.AddRange(new object[] {
             "User",
-            "Debugger"});
-            this.comboBox1.Location = new System.Drawing.Point(179, 73);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(163, 29);
-            this.comboBox1.TabIndex = 9;
+            "Debugger",
+            "Admin"});
+            this.comboBox_slctutype.Location = new System.Drawing.Point(232, 73);
+            this.comboBox_slctutype.Name = "comboBox_slctutype";
+            this.comboBox_slctutype.Size = new System.Drawing.Size(349, 29);
+            this.comboBox_slctutype.TabIndex = 9;
+            this.comboBox_slctutype.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 75);
+            this.label3.Location = new System.Drawing.Point(70, 80);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(156, 22);
             this.label3.TabIndex = 6;
             this.label3.Text = "Sort By Usertype";
+            // 
+            // btn_showall
+            // 
+            this.btn_showall.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_showall.Location = new System.Drawing.Point(593, 74);
+            this.btn_showall.Name = "btn_showall";
+            this.btn_showall.Size = new System.Drawing.Size(135, 29);
+            this.btn_showall.TabIndex = 10;
+            this.btn_showall.Text = "Show All";
+            this.btn_showall.UseVisualStyleBackColor = true;
+            this.btn_showall.Click += new System.EventHandler(this.btn_showall_Click);
             // 
             // ViewUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(772, 508);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_showall);
+            this.Controls.Add(this.comboBox_slctutype);
             this.Controls.Add(this.btn_refresh);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -170,7 +171,7 @@
             this.Controls.Add(this.btn_userdelete);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewUsers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewUsers";
@@ -190,8 +191,8 @@
         private System.Windows.Forms.TextBox text_search;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_refresh;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox_slctutype;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btn_showall;
     }
 }

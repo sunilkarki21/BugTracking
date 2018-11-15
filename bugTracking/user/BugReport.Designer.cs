@@ -31,9 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.homeMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.editMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.lbl_bugTitle = new System.Windows.Forms.Label();
             this.lbl_bugDescription = new System.Windows.Forms.Label();
@@ -44,7 +41,6 @@
             this.textBox_bugdescription = new System.Windows.Forms.TextBox();
             this.dateTimePicker_reportdate = new System.Windows.Forms.DateTimePicker();
             this.comboBoxProject = new System.Windows.Forms.ComboBox();
-            this.pictureBox_bugimg = new System.Windows.Forms.PictureBox();
             this.lbl_img_path = new System.Windows.Forms.Label();
             this.lbl_addBug = new System.Windows.Forms.Label();
             this.btn_browse = new System.Windows.Forms.Button();
@@ -59,50 +55,32 @@
             this.txtBox_bugID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbBox_status = new System.Windows.Forms.ComboBox();
+            this.pictureBox_bugimg = new System.Windows.Forms.PictureBox();
             this.menuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_bugimg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_bug)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_bugimg)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
             // 
+            this.menuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(175)))), ((int)(((byte)(145)))));
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.homeMenu,
-            this.editMenu,
-            this.toolsMenu});
+            this.homeMenu});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1055, 24);
+            this.menuStrip.Size = new System.Drawing.Size(1168, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
             // homeMenu
             // 
+            this.homeMenu.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homeMenu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.homeMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder;
             this.homeMenu.Name = "homeMenu";
-            this.homeMenu.Size = new System.Drawing.Size(37, 20);
-            this.homeMenu.Text = "&File";
+            this.homeMenu.Size = new System.Drawing.Size(55, 20);
+            this.homeMenu.Text = "Home";
             this.homeMenu.Click += new System.EventHandler(this.homeMenu_Click);
-            // 
-            // editMenu
-            // 
-            this.editMenu.Name = "editMenu";
-            this.editMenu.Size = new System.Drawing.Size(39, 20);
-            this.editMenu.Text = "&Edit";
-            // 
-            // toolsMenu
-            // 
-            this.toolsMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.optionsToolStripMenuItem});
-            this.toolsMenu.Name = "toolsMenu";
-            this.toolsMenu.Size = new System.Drawing.Size(47, 20);
-            this.toolsMenu.Text = "&Tools";
-            // 
-            // optionsToolStripMenuItem
-            // 
-            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.optionsToolStripMenuItem.Text = "&Options";
             // 
             // lbl_bugTitle
             // 
@@ -188,27 +166,16 @@
             // 
             this.comboBoxProject.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.comboBoxProject.FormattingEnabled = true;
-            this.comboBoxProject.Items.AddRange(new object[] {
-            "employe management system",
-            "salary management system"});
             this.comboBoxProject.Location = new System.Drawing.Point(195, 111);
             this.comboBoxProject.Name = "comboBoxProject";
             this.comboBoxProject.Size = new System.Drawing.Size(309, 25);
             this.comboBoxProject.TabIndex = 6;
             // 
-            // pictureBox_bugimg
-            // 
-            this.pictureBox_bugimg.Location = new System.Drawing.Point(195, 373);
-            this.pictureBox_bugimg.Name = "pictureBox_bugimg";
-            this.pictureBox_bugimg.Size = new System.Drawing.Size(44, 36);
-            this.pictureBox_bugimg.TabIndex = 7;
-            this.pictureBox_bugimg.TabStop = false;
-            // 
             // lbl_img_path
             // 
             this.lbl_img_path.AutoSize = true;
             this.lbl_img_path.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_img_path.Location = new System.Drawing.Point(248, 388);
+            this.lbl_img_path.Location = new System.Drawing.Point(191, 438);
             this.lbl_img_path.Name = "lbl_img_path";
             this.lbl_img_path.Size = new System.Drawing.Size(115, 21);
             this.lbl_img_path.TabIndex = 1;
@@ -227,7 +194,7 @@
             // btn_browse
             // 
             this.btn_browse.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_browse.Location = new System.Drawing.Point(195, 415);
+            this.btn_browse.Location = new System.Drawing.Point(337, 412);
             this.btn_browse.Name = "btn_browse";
             this.btn_browse.Size = new System.Drawing.Size(75, 23);
             this.btn_browse.TabIndex = 8;
@@ -239,10 +206,11 @@
             // 
             this.btn_cancel.BackColor = System.Drawing.Color.Green;
             this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancel.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(454, 515);
+            this.btn_cancel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_cancel.Location = new System.Drawing.Point(435, 515);
             this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(75, 29);
+            this.btn_cancel.Size = new System.Drawing.Size(69, 29);
             this.btn_cancel.TabIndex = 9;
             this.btn_cancel.Text = "Cancel";
             this.btn_cancel.UseVisualStyleBackColor = false;
@@ -252,8 +220,9 @@
             // 
             this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(175)))), ((int)(((byte)(145)))));
             this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_add.Font = new System.Drawing.Font("Century Gothic", 8.25F);
-            this.btn_add.Location = new System.Drawing.Point(214, 515);
+            this.btn_add.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_add.Location = new System.Drawing.Point(195, 515);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(77, 29);
             this.btn_add.TabIndex = 9;
@@ -265,8 +234,9 @@
             // 
             this.btn_delete.BackColor = System.Drawing.Color.Red;
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_delete.Font = new System.Drawing.Font("Century Gothic", 8.25F);
-            this.btn_delete.Location = new System.Drawing.Point(373, 515);
+            this.btn_delete.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_delete.Location = new System.Drawing.Point(354, 515);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(75, 29);
             this.btn_delete.TabIndex = 9;
@@ -279,7 +249,7 @@
             this.dgv_bug.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_bug.Location = new System.Drawing.Point(543, 69);
             this.dgv_bug.Name = "dgv_bug";
-            this.dgv_bug.Size = new System.Drawing.Size(478, 422);
+            this.dgv_bug.Size = new System.Drawing.Size(613, 475);
             this.dgv_bug.TabIndex = 10;
             this.dgv_bug.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_bug_RowHeaderMouseClick);
             // 
@@ -287,7 +257,7 @@
             // 
             this.lbl_searchbug.AutoSize = true;
             this.lbl_searchbug.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.lbl_searchbug.Location = new System.Drawing.Point(539, 37);
+            this.lbl_searchbug.Location = new System.Drawing.Point(674, 41);
             this.lbl_searchbug.Name = "lbl_searchbug";
             this.lbl_searchbug.Size = new System.Drawing.Size(74, 22);
             this.lbl_searchbug.TabIndex = 11;
@@ -295,7 +265,7 @@
             // 
             // txt_searchbug
             // 
-            this.txt_searchbug.Location = new System.Drawing.Point(619, 39);
+            this.txt_searchbug.Location = new System.Drawing.Point(754, 43);
             this.txt_searchbug.Name = "txt_searchbug";
             this.txt_searchbug.Size = new System.Drawing.Size(402, 20);
             this.txt_searchbug.TabIndex = 12;
@@ -303,10 +273,11 @@
             // 
             // btn_updatebug
             // 
-            this.btn_updatebug.BackColor = System.Drawing.Color.Yellow;
+            this.btn_updatebug.BackColor = System.Drawing.Color.Crimson;
             this.btn_updatebug.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_updatebug.Font = new System.Drawing.Font("Century Gothic", 8.25F);
-            this.btn_updatebug.Location = new System.Drawing.Point(297, 515);
+            this.btn_updatebug.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_updatebug.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_updatebug.Location = new System.Drawing.Point(278, 515);
             this.btn_updatebug.Name = "btn_updatebug";
             this.btn_updatebug.Size = new System.Drawing.Size(70, 29);
             this.btn_updatebug.TabIndex = 13;
@@ -344,6 +315,7 @@
             // 
             // cmbBox_status
             // 
+            this.cmbBox_status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBox_status.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.cmbBox_status.FormattingEnabled = true;
             this.cmbBox_status.Items.AddRange(new object[] {
@@ -354,12 +326,20 @@
             this.cmbBox_status.Size = new System.Drawing.Size(309, 25);
             this.cmbBox_status.TabIndex = 15;
             // 
+            // pictureBox_bugimg
+            // 
+            this.pictureBox_bugimg.Location = new System.Drawing.Point(195, 373);
+            this.pictureBox_bugimg.Name = "pictureBox_bugimg";
+            this.pictureBox_bugimg.Size = new System.Drawing.Size(136, 62);
+            this.pictureBox_bugimg.TabIndex = 7;
+            this.pictureBox_bugimg.TabStop = false;
+            // 
             // BugReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1055, 556);
+            this.ClientSize = new System.Drawing.Size(1168, 559);
             this.Controls.Add(this.cmbBox_status);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_updatebug);
@@ -385,6 +365,7 @@
             this.Controls.Add(this.lbl_addBug);
             this.Controls.Add(this.lbl_bugID);
             this.Controls.Add(this.menuStrip);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip;
             this.Name = "BugReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -392,8 +373,8 @@
             this.Load += new System.EventHandler(this.BugReport_load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_bugimg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_bug)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_bugimg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -403,9 +384,6 @@
 
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem homeMenu;
-        private System.Windows.Forms.ToolStripMenuItem editMenu;
-        private System.Windows.Forms.ToolStripMenuItem toolsMenu;
-        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.Label lbl_bugTitle;
         private System.Windows.Forms.Label lbl_bugDescription;

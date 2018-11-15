@@ -50,9 +50,19 @@ namespace bugTracking.user
 
         private void BugReport_load(object sender, EventArgs e)
         {
+          //  WindowState = FormWindowState.Maximized;
             BugReport vb = new BugReport();
             DataTable dt = vb.Select_bug();
             dgv_bug.DataSource = dt;
+            string type = login.loggedIN_utype;
+            if (type == "Admin")
+            {
+                lbl_addBug.Text = "Manage bug";
+            }
+            else
+            {
+                lbl_addBug.Text = "Enter a new bug";
+            }
         }
          
         public DataTable Search_bug(string keyword)
@@ -141,10 +151,9 @@ namespace bugTracking.user
             string status = cmbBox_status.Text.ToString();
             //getting loggedin user in added by field
             string loggeduser = login.loggedIn;
-           string addedby = loggeduser;
+
+            string addedby = loggeduser;
           
-
-
             ReportDate = DateTime.Now.ToString("yyyy-MM-dd");
 
 
@@ -210,25 +219,40 @@ namespace bugTracking.user
                 //connecting to the database
                 MySqlConnection conn = new MySqlConnection("server = localhost; user id = root; database = bugtracker");
 
-                MySqlDataAdapter sda = new MySqlDataAdapter("DELETE FROM Bug WHERE BugID='" + this.txtBox_bugID.Text + "'", conn);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
+                MySqlCommand sda = new MySqlCommand("DELETE FROM Bug WHERE id='" + this.txtBox_bugID.Text + "'", conn);
+                conn.Open();
 
-                if (dt.Rows.Count>0)
+                //Step 6: Execute cmd
+                int rows = sda.ExecuteNonQuery();
+                //if sda is success rows value is greater than 0
+                if (rows > 0)
                 {
                     MessageBox.Show("Bug Deleted Successfully. Thank You.");
-                  
-                 }
+                    //Refresh Data Grid View
+                    BugReport vb = new BugReport();
+                    DataTable dt = vb.Select_bug();
+                    dgv_bug.DataSource = dt;
+                    //Clear all the Input fields
+                    txtBox_bugID.Clear();
+                    comboBoxProject.Text = "";
+                    textBox_bugtitle.Clear();
+                    textBox_bugdescription.Clear();
+                    dateTimePicker_reportdate.Text = "";
+                    lbl_img_path.Text = "[image path]";
+                    cmbBox_status.Text = "";
+
+                }
                 else
                 {
                     //Delete Failed Message
-                    MessageBox.Show("Failed to delte bug. Please Try Again.");
+                    MessageBox.Show("Failed to delete bug. Please Try Again.");
                 }
 
             }
             else
             {
-                MessageBox.Show("Sorry! You are not allowed to remove any data.");
+                 MessageBox.Show("Sorry! You are not allowed to remove any data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
 
@@ -318,8 +342,19 @@ namespace bugTracking.user
 
         private void homeMenu_Click(object sender, EventArgs e)
         {
-            Dashboard d = new Dashboard();
-            d.Show();
+            string type = login.loggedIN_utype;
+            if (type == "Admin")
+            {
+                admin_dashboard admin = new admin_dashboard();
+                admin.Show();
+                this.Hide();
+            }
+            else
+            {
+                Dashboard home = new Dashboard();
+                home.Show();
+                this.Close();
+            }
         }
     }
 }

@@ -21,11 +21,9 @@ namespace bugTracking.user
         {
             //connecting to the database
             MySqlConnection conn = new MySqlConnection("server = localhost; user id = root; database = bugtracker");
-            //to hold data from database
             string uname = login.loggedIn;
             user_name.Text = uname;
-             
-            DataTable dt = new DataTable();
+            //to hold data from database
             MySqlCommand sda = new MySqlCommand("Select * from registration where username='" + this.user_name.Text + "'", conn);
             MySqlDataReader myreader;
             conn.Open();
@@ -97,7 +95,7 @@ namespace bugTracking.user
             finally
             {
                 //CLose Connection
-                conn.Close();
+                conn.Close();   
             }
         }
     }

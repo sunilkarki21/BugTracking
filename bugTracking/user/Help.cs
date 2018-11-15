@@ -27,11 +27,16 @@ namespace bugTracking.user
                 admin_dashboard admin = new admin_dashboard();
                 admin.Show();
                 this.Hide();
-            }
-            else
+            }else if (type == "Üser")
             {
                 Dashboard home = new Dashboard();
                 home.Show();
+                this.Close();
+            }
+            else
+            {
+                programmer.ProgrammerPanel pp = new programmer.ProgrammerPanel();
+                pp.Show();
                 this.Close();
             }
         }

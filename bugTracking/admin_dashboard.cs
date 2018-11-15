@@ -34,10 +34,11 @@ namespace bugTracking
                 //  MySqlDataAdapter sda = new MySqlDataAdapter("Select count(*) from registration", conn);
                 MySqlCommand cmdcount = new MySqlCommand("Select count(id) from registration", conn);
                 conn.Open();
-
+                //count no of user in database
                 Int32 rows_count = Convert.ToInt32(cmdcount.ExecuteScalar());
                  cmdcount.Dispose();
                  lbl_countuser.Text = rows_count.ToString();
+
             }catch(Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
@@ -66,9 +67,31 @@ namespace bugTracking
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_viewbug_Click(object sender, EventArgs e)
         {
+            user.BugReport bug = new user.BugReport();
+            bug.Show();
+            this.Hide();
+        }
 
+        private void btn_assign_Click(object sender, EventArgs e)
+        {
+            AssignBug ab = new AssignBug();
+            ab.Show();
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FixedBug fb =new FixedBug();
+            fb.Show();
+
+        }
+
+        private void button_history_Click(object sender, EventArgs e)
+        {
+            BugHistory bh = new BugHistory();
+            bh.Show();
         }
     }
 }

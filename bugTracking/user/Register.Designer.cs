@@ -83,6 +83,7 @@
             // 
             // comboBox_usertype
             // 
+            this.comboBox_usertype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_usertype.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_usertype.FormattingEnabled = true;
             this.comboBox_usertype.Items.AddRange(new object[] {

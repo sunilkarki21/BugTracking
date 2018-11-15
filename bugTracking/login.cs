@@ -42,7 +42,7 @@ namespace bugTracking
             //connecting to the database
             MySqlConnection conn = new MySqlConnection("server = localhost; user id = root; database = bugtracker");
             
-            MySqlDataAdapter sda = new MySqlDataAdapter("Select count(*) from registration where username='" + txtUser.Text+"'and password='"+txtPassword.Text+"'",conn);
+            MySqlDataAdapter sda = new MySqlDataAdapter("Select count(*) from registration where username='" + txtUser.Text+"'and password='"+txtPassword.Text+"' and usertype='"+ cmbUsertype .Text+ "'",conn);
             DataTable dt = new DataTable();
             sda.Fill(dt);//it means the fill method retype the row from the datasource using sql query
              
@@ -57,6 +57,7 @@ namespace bugTracking
                 if (dt.Rows[0][0].ToString() == "1")
                 {
                     loggedIn = user;
+                    loggedIN_utype = uType;
                     switch(uType)
                     {
                         case "Admin":
@@ -67,7 +68,7 @@ namespace bugTracking
                                     this.Hide();
                                     loggedIN_utype = uType;
                                     admin_dashboard admin = new admin_dashboard();
-                                    MessageBox.Show("Login was succesful. Welcome back " + txtUser.Text + " !!");
+                                    MessageBox.Show("Login succesful. Welcome back " + txtUser.Text + " !!");
                                     admin.Show();
                                 }
                                 else
@@ -80,8 +81,10 @@ namespace bugTracking
                                 break;
 
                         }
+                            //tester
                          case "User":
                         {
+                                
 
                                 //Display User Dashboard
                                 this.Hide();
@@ -89,12 +92,14 @@ namespace bugTracking
                                 MessageBox.Show("Login was succesful. Welcome back " + txtUser.Text + " !!");
                                 umenu.Show();
                                 break;
+
                             }
+                            //programmer
                         case "Debugger":
                             {
                                 //Display User Dashboard
                                 this.Hide();
-                                user.Dashboard umenu = new user.Dashboard();
+                                programmer.ProgrammerPanel umenu = new programmer.ProgrammerPanel();
                                 MessageBox.Show("Login was succesful. Welcome back " + txtUser.Text + " !!");
                                 umenu.Show();
                                 break;

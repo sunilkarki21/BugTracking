@@ -28,52 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_viewbug = new System.Windows.Forms.Button();
+            this.btn_assign = new System.Windows.Forms.Button();
             this.btn_viewuser = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button_help = new System.Windows.Forms.Button();
             this.button_logout = new System.Windows.Forms.Button();
-            this.button_change = new System.Windows.Forms.Button();
+            this.button_history = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_countuser = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_viewbug
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(175)))), ((int)(((byte)(145)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(314, 120);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(195, 70);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "View Bugs";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_viewbug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(175)))), ((int)(((byte)(145)))));
+            this.btn_viewbug.FlatAppearance.BorderSize = 0;
+            this.btn_viewbug.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_viewbug.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_viewbug.ForeColor = System.Drawing.Color.White;
+            this.btn_viewbug.Location = new System.Drawing.Point(314, 120);
+            this.btn_viewbug.Name = "btn_viewbug";
+            this.btn_viewbug.Size = new System.Drawing.Size(195, 70);
+            this.btn_viewbug.TabIndex = 0;
+            this.btn_viewbug.Text = "View Bugs";
+            this.btn_viewbug.UseVisualStyleBackColor = false;
+            this.btn_viewbug.Click += new System.EventHandler(this.btn_viewbug_Click);
             // 
-            // button2
+            // btn_assign
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(175)))), ((int)(((byte)(145)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(113, 196);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 168);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "button1";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_assign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(175)))), ((int)(((byte)(145)))));
+            this.btn_assign.FlatAppearance.BorderSize = 0;
+            this.btn_assign.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_assign.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_assign.ForeColor = System.Drawing.Color.White;
+            this.btn_assign.Location = new System.Drawing.Point(113, 196);
+            this.btn_assign.Name = "btn_assign";
+            this.btn_assign.Size = new System.Drawing.Size(105, 168);
+            this.btn_assign.TabIndex = 0;
+            this.btn_assign.Text = "Assign Bug";
+            this.btn_assign.UseVisualStyleBackColor = false;
+            this.btn_assign.Click += new System.EventHandler(this.btn_assign_Click);
             // 
             // btn_viewuser
             // 
             this.btn_viewuser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(175)))), ((int)(((byte)(145)))));
             this.btn_viewuser.FlatAppearance.BorderSize = 0;
             this.btn_viewuser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_viewuser.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btn_viewuser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btn_viewuser.ForeColor = System.Drawing.Color.White;
             this.btn_viewuser.Location = new System.Drawing.Point(113, 120);
             this.btn_viewuser.Name = "btn_viewuser";
@@ -88,21 +89,22 @@
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(175)))), ((int)(((byte)(145)))));
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Location = new System.Drawing.Point(224, 196);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(195, 70);
             this.button4.TabIndex = 0;
-            this.button4.Text = "button1";
+            this.button4.Text = "View Fixed Bugs";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button_help
             // 
             this.button_help.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(175)))), ((int)(((byte)(145)))));
             this.button_help.FlatAppearance.BorderSize = 0;
             this.button_help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_help.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.button_help.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.button_help.ForeColor = System.Drawing.Color.White;
             this.button_help.Location = new System.Drawing.Point(325, 272);
             this.button_help.Name = "button_help";
@@ -117,7 +119,7 @@
             this.button_logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(175)))), ((int)(((byte)(145)))));
             this.button_logout.FlatAppearance.BorderSize = 0;
             this.button_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_logout.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.button_logout.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.button_logout.ForeColor = System.Drawing.Color.White;
             this.button_logout.Location = new System.Drawing.Point(425, 196);
             this.button_logout.Name = "button_logout";
@@ -127,19 +129,20 @@
             this.button_logout.UseVisualStyleBackColor = false;
             this.button_logout.Click += new System.EventHandler(this.button_logout_Click);
             // 
-            // button_change
+            // button_history
             // 
-            this.button_change.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(175)))), ((int)(((byte)(145)))));
-            this.button_change.FlatAppearance.BorderSize = 0;
-            this.button_change.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_change.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.button_change.ForeColor = System.Drawing.Color.White;
-            this.button_change.Location = new System.Drawing.Point(224, 272);
-            this.button_change.Name = "button_change";
-            this.button_change.Size = new System.Drawing.Size(95, 92);
-            this.button_change.TabIndex = 0;
-            this.button_change.Text = "Change Password";
-            this.button_change.UseVisualStyleBackColor = false;
+            this.button_history.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(175)))), ((int)(((byte)(145)))));
+            this.button_history.FlatAppearance.BorderSize = 0;
+            this.button_history.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_history.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.button_history.ForeColor = System.Drawing.Color.White;
+            this.button_history.Location = new System.Drawing.Point(224, 272);
+            this.button_history.Name = "button_history";
+            this.button_history.Size = new System.Drawing.Size(95, 92);
+            this.button_history.TabIndex = 0;
+            this.button_history.Text = "Bug History";
+            this.button_history.UseVisualStyleBackColor = false;
+            this.button_history.Click += new System.EventHandler(this.button_history_Click);
             // 
             // label1
             // 
@@ -174,12 +177,12 @@
             this.Controls.Add(this.lbl_countuser);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_logout);
-            this.Controls.Add(this.button_change);
+            this.Controls.Add(this.button_history);
             this.Controls.Add(this.button_help);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btn_viewuser);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_assign);
+            this.Controls.Add(this.btn_viewbug);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "admin_dashboard";
             this.ShowIcon = false;
@@ -193,13 +196,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_viewbug;
+        private System.Windows.Forms.Button btn_assign;
         private System.Windows.Forms.Button btn_viewuser;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button_help;
         private System.Windows.Forms.Button button_logout;
-        private System.Windows.Forms.Button button_change;
+        private System.Windows.Forms.Button button_history;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_countuser;
     }

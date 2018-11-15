@@ -19,3 +19,9 @@ D:\vstudio project\bugTracking\bugTracking\obj\Debug\bugTracking.user.BugReport.
 D:\vstudio project\bugTracking\bugTracking\obj\Debug\bugTracking.user.Register.resources
 D:\vstudio project\bugTracking\bugTracking\obj\Debug\bugTracking.user.ViewUsers.resources
 D:\vstudio project\bugTracking\bugTracking\obj\Debug\bugTracking.user.ChangePassword.resources
+D:\vstudio project\bugTracking\bugTracking\obj\Debug\bugTracking.programmer.ProgrammerPanel.resources
+D:\vstudio project\bugTracking\bugTracking\obj\Debug\bugTracking.user.BugSolution.resources
+D:\vstudio project\bugTracking\bugTracking\obj\Debug\bugTracking.programmer.ViewReport.resources
+D:\vstudio project\bugTracking\bugTracking\obj\Debug\bugTracking.AssignBug.resources
+D:\vstudio project\bugTracking\bugTracking\obj\Debug\bugTracking.FixedBug.resources
+D:\vstudio project\bugTracking\bugTracking\obj\Debug\bugTracking.BugHistory.resources

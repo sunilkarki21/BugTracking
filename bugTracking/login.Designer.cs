@@ -116,6 +116,7 @@
             // 
             // cmbUsertype
             // 
+            this.cmbUsertype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUsertype.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbUsertype.FormattingEnabled = true;
             this.cmbUsertype.Items.AddRange(new object[] {

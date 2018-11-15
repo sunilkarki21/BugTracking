@@ -101,5 +101,38 @@ namespace bugTracking.user
         {
 
         }
+        public DataTable Sort_usertype(string type)
+        {
+            //connecting to the database
+            MySqlConnection conn = new MySqlConnection("server = localhost; user id = root; database = bugtracker");
+            //getting data from database using dataadapter 
+            MySqlDataAdapter sda = new MySqlDataAdapter("Select * from registration where usertype='"+type+"' ", conn);
+            //to hold data from database
+            DataTable dt = new DataTable();
+            sda.Fill(dt);//it means the fill in our database
+            return dt;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string type = comboBox_slctutype.Text;
+            ViewUsers vu = new ViewUsers();
+            DataTable dt = vu.Sort_usertype(type);
+            dataGridView1.DataSource = dt;
+
+
+        }
+
+        private void btn_showall_Click(object sender, EventArgs e)
+        {
+            ViewUsers vu = new ViewUsers();
+            DataTable dt = vu.Select_user();
+            dataGridView1.DataSource = dt;
+        }
+
+        private void butn_cancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

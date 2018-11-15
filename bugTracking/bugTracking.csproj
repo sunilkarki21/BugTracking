@@ -53,7 +53,25 @@
     <Compile Include="admin_dashboard.Designer.cs">
       <DependentUpon>admin_dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="AssignBug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssignBug.Designer.cs">
+      <DependentUpon>AssignBug.cs</DependentUpon>
+    </Compile>
     <Compile Include="Bug.cs" />
+    <Compile Include="BugHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BugHistory.Designer.cs">
+      <DependentUpon>BugHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FixedBug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FixedBug.Designer.cs">
+      <DependentUpon>FixedBug.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +79,18 @@
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="programmer\ProgrammerPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="programmer\ProgrammerPanel.Designer.cs">
+      <DependentUpon>ProgrammerPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="programmer\ViewReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="programmer\ViewReport.Designer.cs">
+      <DependentUpon>ViewReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Userform.cs" />
     <Compile Include="user\BugReport.cs">
@@ -68,6 +98,12 @@
     </Compile>
     <Compile Include="user\BugReport.Designer.cs">
       <DependentUpon>BugReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user\BugSolution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user\BugSolution.Designer.cs">
+      <DependentUpon>BugSolution.cs</DependentUpon>
     </Compile>
     <Compile Include="user\ChangePassword.cs">
       <SubType>Form</SubType>
@@ -102,8 +138,23 @@
     <EmbeddedResource Include="admin_dashboard.resx">
       <DependentUpon>admin_dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AssignBug.resx">
+      <DependentUpon>AssignBug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BugHistory.resx">
+      <DependentUpon>BugHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FixedBug.resx">
+      <DependentUpon>FixedBug.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="programmer\ProgrammerPanel.resx">
+      <DependentUpon>ProgrammerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="programmer\ViewReport.resx">
+      <DependentUpon>ViewReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -117,6 +168,9 @@
     </Compile>
     <EmbeddedResource Include="user\BugReport.resx">
       <DependentUpon>BugReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user\BugSolution.resx">
+      <DependentUpon>BugSolution.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="user\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
