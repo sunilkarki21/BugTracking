@@ -47,10 +47,44 @@ namespace bugTracking.user
             return dt;
 
         }
+   
 
         private void BugReport_load(object sender, EventArgs e)
         {
-          //  WindowState = FormWindowState.Maximized;
+
+            //to get project titile  from database
+            MySqlConnection conn = new MySqlConnection("server = localhost; user id = root; database = bugtracker");
+            MySqlDataReader myreader;
+            try
+            {
+
+                //getting data from database using dataadapter 
+                MySqlCommand sda = new MySqlCommand("Select ProjectTitle from bug", conn);
+                //Create a Datatable to hold the records from database
+                //Step 5:Open Connection
+                conn.Open();
+                myreader = sda.ExecuteReader();
+                while (myreader.Read())
+                {
+                    comboBoxProject.Items.Add(myreader.GetValue(0).ToString());
+
+                }
+                conn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                //Step 8: Close Connection
+                conn.Close();
+            }
+             
+
+            //  WindowState = FormWindowState.Maximized;
             BugReport vb = new BugReport();
             DataTable dt = vb.Select_bug();
             dgv_bug.DataSource = dt;
