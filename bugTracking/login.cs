@@ -33,10 +33,8 @@ namespace bugTracking
         {
             string user = txtUser.Text;//username
             string pass = txtPassword.Text;//password
-            //Decrypt Password Here
-           // pass = EncryptDecrypt.Encrypt(pass);
-            // string uType = this.cmbUsertype.GetItemText(this.cmbUsertype.SelectedItem);//gets item selected in usertype
-
+            // pass = EncryptDecrypt.Encrypt(pass);
+ 
             string uType = cmbUsertype.Text.Trim();
 
             //connecting to the database
@@ -44,7 +42,7 @@ namespace bugTracking
             
             MySqlDataAdapter sda = new MySqlDataAdapter("Select count(*) from registration where username='" + txtUser.Text+"'and password='"+txtPassword.Text+"' and usertype='"+ cmbUsertype .Text+ "'",conn);
             DataTable dt = new DataTable();
-            sda.Fill(dt);//it means the fill method retype the row from the datasource using sql query
+            sda.Fill(dt);//
              
             if (user == "" || pass == "" || uType == "" )
             {
@@ -74,7 +72,6 @@ namespace bugTracking
                                 else
                                 {
                                      MessageBox.Show("Admin Login was failed. Please enter correct username", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
 
                                 }
 

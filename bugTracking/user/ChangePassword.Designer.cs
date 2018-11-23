@@ -80,9 +80,9 @@
             this.lbl_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(175)))), ((int)(((byte)(145)))));
             this.lbl_password.Location = new System.Drawing.Point(41, 246);
             this.lbl_password.Name = "lbl_password";
-            this.lbl_password.Size = new System.Drawing.Size(80, 19);
+            this.lbl_password.Size = new System.Drawing.Size(119, 19);
             this.lbl_password.TabIndex = 18;
-            this.lbl_password.Text = "Password";
+            this.lbl_password.Text = "New Password";
             // 
             // lbl_username
             // 

@@ -52,38 +52,61 @@ namespace bugTracking.user
 
             try
             {
-
-                if (userpassword == userconpwd)
+                //checking whether text box is empty or not
+                if (userpassword == "" || userconpwd == "")
                 {
-                    MySqlCommand sda = new MySqlCommand("update registration set password='" + this.txt_pwd.Text + "',confirm_Password='" + this.txt_cnfm.Text + "' where id='"+this.user_id.Text+"'", conn);
-                    //Open Connection
-                    conn.Open();
-                    int rows = sda.ExecuteNonQuery();
 
-                    //if Inserted rows is greater is greater than 0
-                    //Else set isSuccess to false, Save Failed
+                    MessageBox.Show("U must enter password in the forms", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-
-                    if (rows > 0)
-                    {
-                        MessageBox.Show("Password changed. Please click ok to continue");
-                        //going to dashboard page
-                        Dashboard dash = new Dashboard();
-                        dash.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Password failed to changed. click ok to continue");
-
-                    }
-                  
                 }
                 else
                 {
-                    MessageBox.Show("Password didnot matched !!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //checking whether password matches or not
+                    if (userpassword == userconpwd)
+                    {
+                        MySqlCommand sda = new MySqlCommand("update registration set password='" + this.txt_pwd.Text + "',confirm_Password='" + this.txt_cnfm.Text + "' where id='" + this.user_id.Text + "'", conn);
+                        //Open Connection
+                        conn.Open();
+                        int rows = sda.ExecuteNonQuery();
 
+                        //if Inserted rows is greater is greater than 0
+                        //Else set isSuccess to false, Save Failed
+
+
+                        if (rows > 0)
+                        {
+                            MessageBox.Show("Password changed. Please click ok to continue");
+                            //going to dashboard page
+                            string type = login.loggedIN_utype;
+                     
+                            if (type == "User")
+                            {
+                                Dashboard dash = new Dashboard();
+                                dash.Show();
+                                this.Close();
+                            }
+                            else
+                            {
+                                programmer.ProgrammerPanel pdash = new programmer.ProgrammerPanel();
+                                pdash.Show();
+                                this.Close();
+                            }
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Password failed to changed. click ok to continue");
+
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Password didnot matched !!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
                 }
+
               
 
             }

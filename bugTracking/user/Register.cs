@@ -30,31 +30,39 @@ namespace bugTracking.user
             string Pwd = textBox_pwd.Text.Trim();
             string confirm_pwd = textBox_conPwd.Text.Trim();
             string UserType = comboBox_usertype.Text.Trim();
-            
-             
-            if (Pwd == confirm_pwd)
+            if (Uname == "" || Pwd == "" || confirm_pwd=="" || UserType == "")
             {
-                //connecting to the database
-                MySqlConnection conn = new MySqlConnection("server = localhost; user id = root; database = bugtracker");
 
-                MySqlCommand sda = new MySqlCommand("INSERT INTO registration (username, password, confirm_Password, userType) VALUES ('" + this.textBox_user.Text + "','" + this.textBox_pwd.Text + "','" + this.textBox_conPwd.Text + "','" + this.comboBox_usertype.Text + "')", conn);
-                MySqlDataReader MyReader;
-                conn.Open();
-                MyReader = sda.ExecuteReader();
-                MessageBox.Show("You are now registered. Please click ok");
-                //going to login page
-                login login = new login();
-                login.Show();
-                this.Hide();
-               
+                MessageBox.Show("U must Fill all the forms", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             else
             {
-                MessageBox.Show( "Password didnot matched !!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (Pwd == confirm_pwd)
+                {
+                    //connecting to the database
+                    MySqlConnection conn = new MySqlConnection("server = localhost; user id = root; database = bugtracker");
 
+                    MySqlCommand sda = new MySqlCommand("INSERT INTO registration (username, password, confirm_Password, userType) VALUES ('" + this.textBox_user.Text + "','" + this.textBox_pwd.Text + "','" + this.textBox_conPwd.Text + "','" + this.comboBox_usertype.Text + "')", conn);
+                    MySqlDataReader MyReader;
+                    conn.Open();
+                    MyReader = sda.ExecuteReader();
+                    MessageBox.Show("You are now registered. Please click ok");
+                    //going to login page
+                    login login = new login();
+                    login.Show();
+                    this.Hide();
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Password didnot matched !!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
             }
 
          }
+       
     }
 }

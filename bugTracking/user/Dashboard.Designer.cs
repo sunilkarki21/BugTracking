@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.btn_bug_solve = new System.Windows.Forms.Button();
-            this.btn_bug_notsolved = new System.Windows.Forms.Button();
             this.btn_add_bug = new System.Windows.Forms.Button();
             this.btn_help = new System.Windows.Forms.Button();
             this.btn_logout = new System.Windows.Forms.Button();
@@ -39,41 +37,8 @@
             this.lblLoggedInUser = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_setting = new System.Windows.Forms.Button();
-            this.btn__bug_report = new System.Windows.Forms.Button();
-            this.lbl_countbugreport = new System.Windows.Forms.Label();
-            this.label_bugsolved = new System.Windows.Forms.Label();
-            this.label_bugactive = new System.Windows.Forms.Label();
+            this.btn_versioncontrol = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btn_bug_solve
-            // 
-            this.btn_bug_solve.BackColor = System.Drawing.Color.Gray;
-            this.btn_bug_solve.Enabled = false;
-            this.btn_bug_solve.FlatAppearance.BorderSize = 0;
-            this.btn_bug_solve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_bug_solve.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_bug_solve.ForeColor = System.Drawing.Color.White;
-            this.btn_bug_solve.Location = new System.Drawing.Point(203, 318);
-            this.btn_bug_solve.Name = "btn_bug_solve";
-            this.btn_bug_solve.Size = new System.Drawing.Size(176, 68);
-            this.btn_bug_solve.TabIndex = 3;
-            this.btn_bug_solve.Text = "Bug Solved";
-            this.btn_bug_solve.UseVisualStyleBackColor = false;
-            // 
-            // btn_bug_notsolved
-            // 
-            this.btn_bug_notsolved.BackColor = System.Drawing.Color.Gray;
-            this.btn_bug_notsolved.Enabled = false;
-            this.btn_bug_notsolved.FlatAppearance.BorderSize = 0;
-            this.btn_bug_notsolved.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_bug_notsolved.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_bug_notsolved.ForeColor = System.Drawing.Color.White;
-            this.btn_bug_notsolved.Location = new System.Drawing.Point(-5, 318);
-            this.btn_bug_notsolved.Name = "btn_bug_notsolved";
-            this.btn_bug_notsolved.Size = new System.Drawing.Size(202, 72);
-            this.btn_bug_notsolved.TabIndex = 3;
-            this.btn_bug_notsolved.Text = "Bug unsolved";
-            this.btn_bug_notsolved.UseVisualStyleBackColor = false;
             // 
             // btn_add_bug
             // 
@@ -166,66 +131,19 @@
             this.btn_setting.UseVisualStyleBackColor = false;
             this.btn_setting.Click += new System.EventHandler(this.btn_setting_Click);
             // 
-            // btn__bug_report
+            // btn_versioncontrol
             // 
-            this.btn__bug_report.BackColor = System.Drawing.Color.Gray;
-            this.btn__bug_report.Enabled = false;
-            this.btn__bug_report.FlatAppearance.BorderSize = 0;
-            this.btn__bug_report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn__bug_report.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn__bug_report.ForeColor = System.Drawing.Color.White;
-            this.btn__bug_report.Location = new System.Drawing.Point(385, 318);
-            this.btn__bug_report.Name = "btn__bug_report";
-            this.btn__bug_report.Size = new System.Drawing.Size(187, 68);
-            this.btn__bug_report.TabIndex = 3;
-            this.btn__bug_report.Text = "Bug Reported";
-            this.btn__bug_report.UseVisualStyleBackColor = false;
-            this.btn__bug_report.Click += new System.EventHandler(this.btn__bug_report_Click);
-            // 
-            // lbl_countbugreport
-            // 
-            this.lbl_countbugreport.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_countbugreport.BackColor = System.Drawing.Color.Gray;
-            this.lbl_countbugreport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_countbugreport.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_countbugreport.ForeColor = System.Drawing.Color.White;
-            this.lbl_countbugreport.Location = new System.Drawing.Point(497, 318);
-            this.lbl_countbugreport.Name = "lbl_countbugreport";
-            this.lbl_countbugreport.Size = new System.Drawing.Size(58, 25);
-            this.lbl_countbugreport.TabIndex = 6;
-            this.lbl_countbugreport.Text = "0";
-            this.lbl_countbugreport.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label_bugsolved
-            // 
-            this.label_bugsolved.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_bugsolved.BackColor = System.Drawing.Color.Gray;
-            this.label_bugsolved.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label_bugsolved.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_bugsolved.ForeColor = System.Drawing.Color.White;
-            this.label_bugsolved.Location = new System.Drawing.Point(328, 318);
-            this.label_bugsolved.Name = "label_bugsolved";
-            this.label_bugsolved.Size = new System.Drawing.Size(51, 25);
-            this.label_bugsolved.TabIndex = 6;
-            this.label_bugsolved.Text = "0";
-            this.label_bugsolved.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label_bugactive
-            // 
-            this.label_bugactive.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_bugactive.BackColor = System.Drawing.Color.Gray;
-            this.label_bugactive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label_bugactive.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_bugactive.ForeColor = System.Drawing.Color.White;
-            this.label_bugactive.Location = new System.Drawing.Point(97, 318);
-            this.label_bugactive.Name = "label_bugactive";
-            this.label_bugactive.Size = new System.Drawing.Size(100, 25);
-            this.label_bugactive.TabIndex = 6;
-            this.label_bugactive.Text = "0";
-            this.label_bugactive.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_versioncontrol.BackColor = System.Drawing.Color.Crimson;
+            this.btn_versioncontrol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_versioncontrol.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_versioncontrol.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_versioncontrol.Location = new System.Drawing.Point(159, 316);
+            this.btn_versioncontrol.Name = "btn_versioncontrol";
+            this.btn_versioncontrol.Size = new System.Drawing.Size(279, 58);
+            this.btn_versioncontrol.TabIndex = 30;
+            this.btn_versioncontrol.Text = "Version Control";
+            this.btn_versioncontrol.UseVisualStyleBackColor = false;
+            this.btn_versioncontrol.Click += new System.EventHandler(this.btn_versioncontrol_Click);
             // 
             // Dashboard
             // 
@@ -233,19 +151,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(567, 386);
-            this.Controls.Add(this.label_bugactive);
-            this.Controls.Add(this.label_bugsolved);
-            this.Controls.Add(this.lbl_countbugreport);
+            this.Controls.Add(this.btn_versioncontrol);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblLoggedInUser);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.btn_help);
             this.Controls.Add(this.btn_add_bug);
-            this.Controls.Add(this.btn_bug_notsolved);
             this.Controls.Add(this.btn_setting);
-            this.Controls.Add(this.btn_bug_solve);
-            this.Controls.Add(this.btn__bug_report);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -258,8 +171,6 @@
         #endregion
 
         private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.Button btn_bug_solve;
-        private System.Windows.Forms.Button btn_bug_notsolved;
         private System.Windows.Forms.Button btn_add_bug;
         private System.Windows.Forms.Button btn_help;
         private System.Windows.Forms.Button btn_logout;
@@ -267,10 +178,7 @@
         private System.Windows.Forms.Label lblLoggedInUser;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_setting;
-        private System.Windows.Forms.Button btn__bug_report;
-        private System.Windows.Forms.Label lbl_countbugreport;
-        private System.Windows.Forms.Label label_bugsolved;
-        private System.Windows.Forms.Label label_bugactive;
+        private System.Windows.Forms.Button btn_versioncontrol;
     }
 }
 

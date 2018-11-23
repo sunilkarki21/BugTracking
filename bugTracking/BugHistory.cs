@@ -76,12 +76,12 @@ namespace bugTracking
 
 
         }
-        public DataTable Sort_usertype(string type)
+        public DataTable Sort_usertype(string title)
         {
             //connecting to the database
             MySqlConnection conn = new MySqlConnection("server = localhost; user id = root; database = bugtracker");
             //getting data from database using dataadapter 
-            MySqlDataAdapter sda = new MySqlDataAdapter("Select * from bug where BugTitle='" + type + "' ", conn);
+            MySqlDataAdapter sda = new MySqlDataAdapter("Select * from bug where BugTitle='" + title + "' ", conn);
             //to hold data from database
             DataTable dt = new DataTable();
             sda.Fill(dt);//it means the fill in our database

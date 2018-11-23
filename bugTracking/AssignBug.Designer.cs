@@ -46,7 +46,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(325, 64);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(452, 223);
+            this.dataGridView1.Size = new System.Drawing.Size(729, 418);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
@@ -58,7 +58,7 @@
             this.lblTitle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblTitle.Location = new System.Drawing.Point(247, 19);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(255, 33);
+            this.lblTitle.Size = new System.Drawing.Size(528, 33);
             this.lblTitle.TabIndex = 19;
             this.lblTitle.Text = "Assign Bug ";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -68,7 +68,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 168);
+            this.label1.Location = new System.Drawing.Point(24, 137);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 21);
             this.label1.TabIndex = 20;
@@ -80,7 +80,7 @@
             this.comboBox_assign.FormattingEnabled = true;
             this.comboBox_assign.Items.AddRange(new object[] {
             "--Select--"});
-            this.comboBox_assign.Location = new System.Drawing.Point(114, 160);
+            this.comboBox_assign.Location = new System.Drawing.Point(119, 129);
             this.comboBox_assign.Name = "comboBox_assign";
             this.comboBox_assign.Size = new System.Drawing.Size(189, 29);
             this.comboBox_assign.TabIndex = 21;
@@ -91,7 +91,7 @@
             this.btn_appoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_appoint.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_appoint.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_appoint.Location = new System.Drawing.Point(114, 201);
+            this.btn_appoint.Location = new System.Drawing.Point(119, 170);
             this.btn_appoint.Name = "btn_appoint";
             this.btn_appoint.Size = new System.Drawing.Size(98, 32);
             this.btn_appoint.TabIndex = 22;
@@ -105,7 +105,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(213, 201);
+            this.button2.Location = new System.Drawing.Point(218, 170);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 32);
             this.button2.TabIndex = 23;
@@ -116,7 +116,7 @@
             // textBox_BugTitle
             // 
             this.textBox_BugTitle.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.textBox_BugTitle.Location = new System.Drawing.Point(114, 128);
+            this.textBox_BugTitle.Location = new System.Drawing.Point(119, 97);
             this.textBox_BugTitle.Name = "textBox_BugTitle";
             this.textBox_BugTitle.ReadOnly = true;
             this.textBox_BugTitle.Size = new System.Drawing.Size(189, 27);
@@ -125,7 +125,7 @@
             // textBox_bugID
             // 
             this.textBox_bugID.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.textBox_bugID.Location = new System.Drawing.Point(114, 95);
+            this.textBox_bugID.Location = new System.Drawing.Point(119, 64);
             this.textBox_bugID.Name = "textBox_bugID";
             this.textBox_bugID.ReadOnly = true;
             this.textBox_bugID.Size = new System.Drawing.Size(189, 27);
@@ -136,7 +136,7 @@
             this.label_bugTitle.AutoSize = true;
             this.label_bugTitle.BackColor = System.Drawing.Color.Transparent;
             this.label_bugTitle.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label_bugTitle.Location = new System.Drawing.Point(19, 134);
+            this.label_bugTitle.Location = new System.Drawing.Point(24, 103);
             this.label_bugTitle.Name = "label_bugTitle";
             this.label_bugTitle.Size = new System.Drawing.Size(75, 21);
             this.label_bugTitle.TabIndex = 25;
@@ -147,7 +147,7 @@
             this.label_BugID.AutoSize = true;
             this.label_BugID.BackColor = System.Drawing.Color.Transparent;
             this.label_BugID.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label_BugID.Location = new System.Drawing.Point(19, 101);
+            this.label_BugID.Location = new System.Drawing.Point(24, 70);
             this.label_BugID.Name = "label_BugID";
             this.label_BugID.Size = new System.Drawing.Size(61, 21);
             this.label_BugID.TabIndex = 24;
@@ -158,7 +158,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(793, 302);
+            this.ClientSize = new System.Drawing.Size(1066, 494);
             this.Controls.Add(this.textBox_BugTitle);
             this.Controls.Add(this.textBox_bugID);
             this.Controls.Add(this.label_bugTitle);

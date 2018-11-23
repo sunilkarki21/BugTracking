@@ -90,10 +90,10 @@
             // 
             // text_search
             // 
-            this.text_search.Location = new System.Drawing.Point(150, 128);
+            this.text_search.Location = new System.Drawing.Point(232, 128);
             this.text_search.Multiline = true;
             this.text_search.Name = "text_search";
-            this.text_search.Size = new System.Drawing.Size(431, 31);
+            this.text_search.Size = new System.Drawing.Size(349, 31);
             this.text_search.TabIndex = 5;
             this.text_search.TextChanged += new System.EventHandler(this.text_search_TextChanged);
             // 

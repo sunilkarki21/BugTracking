@@ -93,5 +93,10 @@ namespace bugTracking
             BugHistory bh = new BugHistory();
             bh.Show();
         }
+
+        private void btn_versioncontrol_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/sunilkarki21/BugTracking");
+        }
     }
 }
